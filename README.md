@@ -62,3 +62,7 @@ python3 -m http.server 8000 --directory dist
 2. 清楚区分概念、设计、已实现与已验证。
 3. 保留关键取舍和失败尝试，说明作者与 ChatGPT 各自的贡献。
 4. 每次站点内容更新后，将对应源码继续推送到本仓库。
+
+## 第一阶段：模型的工具
+
+[阅读学习记录](content/01-model-tools.md)。站点的 `/stage/01/` 和 REV 01 画布展示 Tool Call、执行边界、Read／Edit／Bash 与反馈链；对照页 `/compare/` 标出相对 REV 00 的变化。资料包属于学习输入，未声称有可运行的作者实现。
