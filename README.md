@@ -8,7 +8,7 @@
 
 ## 当前进度
 
-`00 / 最小架构构想`：已建立展示框架。画布里的用户输入、Agent、模型、工具与结果只是讨论起点，尚未实现或验证。第一阶段仍等待实际对话总结；后续模块的增量和顺序以真实搭建过程为准。
+`00 / Agent 的定义与最小循环`：已记录四种官方定义的概括、作者的理解、工具反馈循环和 Python 伪代码。画布展示 User → LLM → 按需 Tool → Tool Result → LLM；没有工具调用时返回最终结果。代码尚未运行或验证，第一阶段等待实际搭建总结。完整内容见 [`content/00-agent-definition.md`](content/00-agent-definition.md)。
 
 ## 页面内容
 
@@ -29,6 +29,7 @@
 ```text
 .
 ├── GOAL.md                 # 项目目标与阶段输入约定
+├── content/00-agent-definition.md  # 第 0 部分知识原文与出处
 ├── README.md               # 项目说明
 ├── dist/
 │   ├── index.html          # 工作台入口
