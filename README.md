@@ -1,6 +1,6 @@
 # 从零搭建 Agent · 架构学习日志
 
-一个按真实学习与搭建顺序持续更新的可视化项目。通过架构画布、模块说明和阶段记录，展示从最小 Agent 开始逐步构建系统的过程，以及作者与 ChatGPT 讨论、选择和验证方案的协作方式。
+一个按真实学习与搭建顺序持续更新的可视化项目。通过架构画布、模块说明和阶段记录，展示从最小 Agent 开始逐步构建系统的过程，以及作者与 ChatGPT 讨论、选择和验证方案的协作方式。界面提供十种可切换的视觉风格，共享同一份架构与阶段数据。
 
 **站点：** https://agent-architecture-journey.dingikang.chatgpt.site
 
@@ -16,6 +16,8 @@
 - **逐步演进：** 说明每次增加模块所解决的问题，以及新引入的复杂度。
 - **过程记录：** 记录目标与约束、候选方案、作者判断、ChatGPT 建议、实现与验证。
 - **目标文档：** [`GOAL.md`](GOAL.md) 是后续编辑的内容约定；网页版本位于站点的 `/goal.html`。
+- **十种主题：** 从工作台、极简手册、科幻蓝图到魔幻秘典等，入口在 `/design/`。主题切换保留当前阶段与模块焦点。
+- **页面结构：** `/journey/`、`/stage/00/`、`/architecture/`、`/modules/<slug>/`、`/compare/`、`/about/`、`/design/`。当前只有 00 阶段的真实占位记录；版本对比等待第一阶段。
 
 ## 后续阶段如何更新
 
@@ -25,12 +27,18 @@
 
 ```text
 .
-├── GOAL.md               # 项目目标与阶段输入约定
-├── README.md             # 项目说明
+├── GOAL.md                 # 项目目标与阶段输入约定
+├── README.md               # 项目说明
 ├── dist/
-│   ├── index.html        # 主页面：架构画布与阶段记录
-│   └── goal.html         # 可在线阅读的目标文档
-└── .openai/hosting.json  # Sites 项目配置
+│   ├── index.html          # 工作台入口
+│   ├── assets/
+│   │   ├── data.js         # 共享阶段、模块、主题数据
+│   │   ├── app.js          # 路由、画布、检查器与主题交互
+│   │   ├── style.css       # 工作台基础界面
+│   │   └── themes.css      # 十种主题的布局与视觉语法
+│   ├── journey/ ...        # 阶段、架构、模块等静态页面入口
+│   └── goal.html           # 在线目标文档
+└── .openai/hosting.json    # Sites 项目配置
 ```
 
 ## 本地查看
@@ -41,7 +49,7 @@
 python3 -m http.server 8000 --directory dist
 ```
 
-打开 `http://localhost:8000`。页面是静态 HTML、CSS 和 JavaScript；点击架构节点查看说明。后续更新时，`GOAL.md` 与网页目标文档应保持一致。
+打开 `http://localhost:8000`。页面是静态 HTML、CSS 和 JavaScript；点击架构节点查看说明；用滚轮或按钮缩放画布，拖动空白处平移。按 `Ctrl/Cmd + K` 打开命令面板，在右上角切换主题。移动端显示架构文字概览。后续更新时，`GOAL.md` 与网页目标文档应保持一致。
 
 ## 更新原则
 
