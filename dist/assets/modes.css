@@ -1,0 +1,30 @@
+/* Light and dark modes are independent of the ten layout themes. Native theme mode is used until the visitor makes a choice. */
+html[data-mode=light]{color-scheme:light;--bg:#f5f7f8;--surface:#fff;--surface2:#edf2f4;--text:#17212b;--muted:#435563;--line:#b9c9ce;--signal:#116b60;--warn:#805309;--node:#fff}
+html[data-mode=light][data-theme=blueprint]{--bg:#edf6fa;--surface:#f6fcff;--surface2:#dceef6;--node:#fff;--signal:#11657d;--line:#a3c2d0}
+html[data-mode=light][data-theme=arcane]{--bg:#f6f1e7;--surface:#fffaf0;--surface2:#eee3d4;--node:#fffaf2;--signal:#775124;--line:#bfa98c}
+html[data-mode=light][data-theme=cyberpunk]{--bg:#f5f3f9;--surface:#fff;--surface2:#eee8f5;--node:#fff;--signal:#007c72;--line:#b9aeca}
+html[data-mode=light][data-theme=spatial]{--bg:#e7eef6;--surface:#ffffffda;--surface2:#ffffffb8;--node:#f9fcff;--signal:#165e8e;--line:#97b3c7}
+html[data-mode=light][data-theme=terminal]{--bg:#f0f7ef;--surface:#fbfffa;--surface2:#e0eee0;--node:#fbfffa;--signal:#236a3b;--line:#9bb7a0}
+html[data-mode=light][data-theme=kinetic]{--bg:#edf1f7;--surface:#fff;--surface2:#e4ebf6;--node:#f9fbff;--signal:#126c60;--line:#a8bbca}
+html[data-mode=light][data-theme=workbench]{--bg:#f2f6f7;--surface:#fff;--surface2:#eaf0f1;--node:#fff;--signal:#116b60;--line:#aebfc3}
+html[data-mode=dark]{color-scheme:dark;--bg:#0e1217;--surface:#181e24;--surface2:#222b32;--text:#edf4f3;--muted:#b4c3c2;--line:#52626a;--signal:#7ce5c8;--warn:#f3c27c;--node:#1c252a}
+html[data-mode=dark][data-theme=minimal]{--signal:#8cd7c1;--line:#61706b}html[data-mode=dark][data-theme=swiss]{--signal:#ff8879;--line:#657079}html[data-mode=dark][data-theme=brutalist]{--bg:#181717;--surface:#232321;--surface2:#3c3530;--node:#40332d;--signal:#ff8a7b;--line:#d8caba}
+html[data-mode=light] body,html[data-mode=dark] body{background:var(--bg);color:var(--text)}
+html[data-mode=light] .topbar,html[data-mode=light] .rail,html[data-mode=light] .inspector,html[data-mode=light] .record-band,html[data-mode=dark] .topbar,html[data-mode=dark] .rail,html[data-mode=dark] .inspector,html[data-mode=dark] .record-band{background:var(--surface);color:var(--text)}
+html[data-mode=light] .canvas-shell,html[data-mode=dark] .canvas-shell{background:var(--bg)}
+html[data-mode=light] .canvas-frame,html[data-mode=dark] .canvas-frame{background:var(--surface)}
+html[data-mode=light] .graph-viewport,html[data-mode=dark] .graph-viewport{background-color:var(--surface);background-image:linear-gradient(color-mix(in srgb,var(--line) 25%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--line) 25%,transparent) 1px,transparent 1px)}
+html[data-mode=light] .graph-node,html[data-mode=dark] .graph-node{background:var(--node);color:var(--text)}
+html[data-mode=light] .site-footer,html[data-mode=dark] .site-footer{background:var(--bg)}
+html[data-mode=light] .edge text,html[data-mode=dark] .edge text{stroke:var(--surface)}
+html[data-mode=light] .theme-dialog,html[data-mode=light] .palette,html[data-mode=dark] .theme-dialog,html[data-mode=dark] .palette{background:var(--surface);color:var(--text)}
+html[data-mode=light] .dialog-theme,html[data-mode=dark] .dialog-theme{background:var(--bg);color:var(--text)}
+html[data-mode=light][data-theme=arcane] .graph-viewport:before{border-color:#77512455;box-shadow:0 0 0 55px #7751240d}
+html[data-mode=dark][data-theme=brutalist] .topbar{background:#41332e}html[data-mode=dark][data-theme=brutalist] .record-flow div,html[data-mode=dark][data-theme=brutalist] .canvas-frame,html[data-mode=dark][data-theme=brutalist] .inspector,html[data-mode=dark][data-theme=brutalist] .rail{border-color:var(--line)}
+html[data-mode=light][data-theme=brutalist] .topbar{background:#ff6b5f}html[data-mode=light][data-theme=brutalist] .rail{background:#7ed7c4}html[data-mode=light][data-theme=brutalist] .record-band{background:#ffd95a}
+html[data-mode=dark][data-theme=brutalist] .graph-node:nth-of-type(n){background:var(--node);color:var(--text);border-color:var(--line)}
+html[data-mode=dark][data-theme=brutalist] .stage-item.active{background:#3d3430;color:var(--text);border-color:var(--line);box-shadow:4px 4px #000}
+html[data-mode=dark][data-theme=brutalist] .mark-symbol{color:var(--signal)}
+html[data-mode=dark][data-theme=brutalist] .state-mark{background:var(--signal);color:var(--bg)}
+html[data-mode=light][data-theme=arcane] .graph-node{box-shadow:0 0 0 3px #d9c8ac,inset 0 0 0 1px #bba47b}
+html[data-mode=light][data-theme=kinetic] .graph-node{box-shadow:0 12px 25px #8796a366;background:var(--node)}

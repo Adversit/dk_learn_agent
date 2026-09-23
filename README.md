@@ -17,6 +17,7 @@
 - **过程记录：** 记录目标与约束、候选方案、作者判断、ChatGPT 建议、实现与验证。
 - **目标文档：** [`GOAL.md`](GOAL.md) 是后续编辑的内容约定；网页版本位于站点的 `/goal.html`。
 - **十种主题：** 从工作台、极简手册、科幻蓝图到魔幻秘典等，入口在 `/design/`。主题切换保留当前阶段与模块焦点。
+- **明暗与中英文：** 顶栏独立切换浅色/深色与中文/English，偏好保存在当前设备；目标文档也提供英文版。
 - **页面结构：** `/journey/`、`/stage/00/`、`/architecture/`、`/modules/<slug>/`、`/compare/`、`/about/`、`/design/`。当前只有 00 阶段的真实占位记录；版本对比等待第一阶段。
 
 ## 后续阶段如何更新
@@ -33,11 +34,14 @@
 │   ├── index.html          # 工作台入口
 │   ├── assets/
 │   │   ├── data.js         # 共享阶段、模块、主题数据
-│   │   ├── app.js          # 路由、画布、检查器与主题交互
+│   │   ├── i18n.js         # 中英文内容映射
+│   │   ├── app.js          # 路由、画布、检查器与偏好切换
 │   │   ├── style.css       # 工作台基础界面
-│   │   └── themes.css      # 十种主题的布局与视觉语法
+│   │   ├── themes.css      # 十种主题的布局与视觉语法
+│   │   └── modes.css       # 独立明暗模式
 │   ├── journey/ ...        # 阶段、架构、模块等静态页面入口
-│   └── goal.html           # 在线目标文档
+│   ├── goal.html           # 中文目标文档
+│   └── goal-en.html        # English project goal
 └── .openai/hosting.json    # Sites 项目配置
 ```
 
